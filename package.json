@@ -1,0 +1,22 @@
+{
+  "name": "appium_2_android_automation",
+  "version": "1.0.0",
+  "description": "Android automation on Appium 2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=jest.config.js --detectOpenHandles ./specs/e2e_regression.spec.js"
+  },
+  "keywords": [
+    "android",
+    "appium",
+    "test",
+    "automation"
+  ],
+  "author": "James W",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "jest": "^29.7.0",
+    "webdriverio": "^9.9.3"
+  }
+}

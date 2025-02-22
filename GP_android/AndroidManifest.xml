@@ -1,0 +1,497 @@
+Decompiler.com
+JAR String Editor
+Release Notes
+support@decompiler.com
+No-code Payments Integration Seamless integration in just a few clicks Try For Free
+Ads by EthicalAds
+Getaround.apk  
+Getaround.apk resources AndroidManifest.xml
+Download file
+    <?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="15463" android:versionName="9.77.2" android:installLocation="auto" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="com.c4mprod.voiturelib" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="34"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="10000"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="tel"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="geo"/>
+        </intent>
+        <provider android:authorities="com.getaround.login.provider"/>
+        <package android:name="com.android.chrome"/>
+        <intent>
+            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION"/>
+        </intent>
+        <package android:name="com.facebook.katana"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.instagram.android"/>
+    </queries>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <permission android:name="com.c4mprod.voiturelib.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.c4mprod.voiturelib.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application android:theme="@style/PreviewTheme.Cobalt" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.drivy.android.DRApplication" android:allowBackup="false" android:supportsRtl="true" android:extractNativeLibs="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:localeConfig="@xml/locales_config">
+        <activity android:theme="@style/Theme.NoDisplay" android:name="com.drivy.android.domain.router.RouterActivity" android:exported="true" android:noHistory="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:host="at.getaround.com"/>
+                <data android:host="be.getaround.com"/>
+                <data android:host="de.getaround.com"/>
+                <data android:host="en.getaround.com"/>
+                <data android:host="es.getaround.com"/>
+                <data android:host="fr.getaround.com"/>
+                <data android:host="fr.be.getaround.com"/>
+                <data android:host="uk.getaround.com"/>
+                <data android:host="no.getaround.com"/>
+                <data android:host="fl.getaround.com"/>
+                <data android:host="getaround.com"/>
+                <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="dashboard"/>
+                <data android:scheme="drivy"/>
+                <data android:path="/home"/>
+                <data android:path="/cars"/>
+                <data android:path="/cars/new"/>
+                <data android:pathPattern="/cars/.*/checklist"/>
+                <data android:pathPattern="/cars/.*/photos"/>
+                <data android:path="/rentals"/>
+                <data android:pathPattern="/rentals/.*/driver/agreement"/>
+                <data android:pathPattern="/rentals/.*/open/agreement"/>
+                <data android:pathPattern="/rentals/.*/open/car/location"/>
+                <data android:pathPattern="/rentals/.*/messages"/>
+                <data android:host="profile_verifications"/>
+                <data android:path="/new"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="drivy" android:host="customer_support"/>
+                <data android:scheme="drivy" android:host="bank_id_return"/>
+                <data android:scheme="drivy" android:host="firebase"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="cobalt"/>
+            </intent-filter>
+        </activity>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDMVPZFSPZpaRyU-yK85GJdOjThs1SEXFM"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb114069411958430"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="c3cde9afc8008d99d5e0747dd136a261"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="3389d1780bc93eba4c9d123243cdc1fe513c2abc"/>
+        <meta-data android:name="com.getaround.captur.API_KEY" android:value="78e8b"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
+        <service android:name="com.drivy.android.system.fcm.DrivyFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.drivy.android.system.fcm.NotificationDismissedReceiver"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.drivy.android.system.service.agreement.AgreementRepostService" android:exported="false"/>
+        <service android:name="com.drivy.android.service.CarPhotosDeleteService" android:exported="false"/>
+        <service android:name="com.drivy.android.service.payment.PaymentRequestService" android:exported="false"/>
+        <service android:name="com.drivy.android.system.service.rental.CarConnectionService" android:exported="false" android:foregroundServiceType="10"/>
+        <activity android:theme="@style/Theme.Drivy.Facebook" android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Transparent" android:name="com.drivy.android.presentation.MainActivity" android:exported="true" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.drivy.android.presentation.search.SearchActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.presentation.onboarding.AppOnboardingActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.onboarding.AppSwitchOnboardingActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.AgreementActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkin.steps.CheckinStepsActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/checkin_additional_drivers_check.title" android:name="com.drivy.android.presentation.agreement.checkin.steps.driver.AdditionalDriverListActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkin.steps.driver.AdditionalDriverActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkin.CheckinPhotosActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Dark" android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkin.photos.PhotosViewActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkin.steps.CheckinReviewActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkout.steps.CheckoutStepsActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkout.steps.problems.OtherProblemsCheckoutActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkout.steps.adjustements.AdjustmentsCheckoutActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.agreement.checkout.steps.CheckoutReviewActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/dashboard.open.rental.car_location.title" android:name="com.drivy.android.presentation.rental.location.RentalCarLocationActivity" android:exported="true" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/rental_agreement.title" android:name="com.drivy.android.presentation.rental.agreement.RentalAgreementActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:label="@string/agreement.open.completed.troubleshoot.title" android:name="com.drivy.android.presentation.rental.agreement.checkout.troubleshoot.TroubleshootAgreementActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/agreement.open.completed.troubleshoot.title" android:name="com.drivy.android.presentation.rental.lock.CarLockActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/exterior_inspection_check.car_pictures_review.title" android:name="com.drivy.android.presentation.rental.agreement.common.photo.FullScreenPhotoReviewActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:label="@string/profile_verification.title" android:name="com.drivy.android.presentation.profileverification.ProfileVerificationActivity"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.profileverification.CompletedProfileVerificationActivity"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.faceverification.FaceVerificationActivity" android:exported="true" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/Theme.Cobalt.Transparent.DialogActivity" android:name="com.drivy.android.presentation.faceverification.request.FaceVerificationRequestBottomSheetActivity" android:exported="true"/>
+        <activity android:label="@string/dashboard.match.show_owner.title" android:name="com.drivy.android.activity.match.MatchShowActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/session.sign_up" android:name="com.drivy.android.activity.session.SignUpActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="@integer/screen_orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="drivy" android:host="users" android:path="/registrations/confirm"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/session.log_in" android:name="com.drivy.android.activity.session.LogInActivity" android:launchMode="singleTop" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.session.AcceptTermsOfServicesActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.session.FacebookUSImportActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/navigation.about" android:name="com.drivy.android.presentation.about.AboutActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/navigation.referral" android:name="com.drivy.android.activity.referral.ReferralActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/Theme.Cobalt.Transparent" android:name="com.drivy.android.presentation.account.SwitchRoleActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.presentation.car.show.CarShowActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.presentation.rental.RentalSearchActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.drivy.android.presentation.rental.show.RentalShowActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize" android:parentActivityName="com.drivy.android.presentation.MainActivity"/>
+        <activity android:name="com.drivy.android.presentation.rental.extension.RentalExtensionActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation" android:parentActivityName="com.drivy.android.presentation.rental.show.RentalShowActivity"/>
+        <activity android:name="com.drivy.android.presentation.rental.extension.composable.payment.picker.RentalExtensionCardPickerActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation" android:parentActivityName="com.drivy.android.presentation.rental.extension.RentalExtensionActivity"/>
+        <activity android:name="com.drivy.android.presentation.card.CardNewActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize" android:parentActivityName="com.drivy.android.presentation.rental.extension.RentalExtensionActivity"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.rental.tolls.PredictiveTollingGuideActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt" android:name="com.drivy.android.presentation.rental.secondarydrivers.SecondaryDriversActivity" android:exported="true" android:taskAffinity="com.drivy.android.presentation.rental.show.RentalShow" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize" android:parentActivityName="com.drivy.android.presentation.rental.show.RentalShowActivity" android:autoRemoveFromRecents="true"/>
+        <activity android:label="@string/filters.index.title" android:name="com.drivy.android.presentation.search.FiltersFormActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/review.index.title" android:name="com.drivy.android.activity.user.UserShowActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/Theme.Drivy.Payment.DialogWhenLarge" android:label="@string/card.list.title.add" android:name="com.drivy.android.presentation.payment.card.BookingCardNewActivity" android:launchMode="singleTop" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.drivy.android.presentation.payment.paymentmethods.PaymentMethodsActivity" android:launchMode="singleTop" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/payment.paypal" android:name="com.drivy.android.presentation.payment.paypal.PaypalActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="drivy" android:host="paypal_return"/>
+                <data android:scheme="drivy" android:host="paypal_cancel"/>
+                <data android:scheme="drivy" android:host="paypal_error"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/booking.title" android:name="com.drivy.android.presentation.payment.PaymentActivity" android:launchMode="singleTop" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.presentation.payment.rentalinstruction.RentalInstructionActivity" android:launchMode="singleTop" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/review.index.title" android:name="com.drivy.android.activity.review.ReviewsActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/Theme.Drivy.NoTitleBar.Fullscreen" android:name="com.drivy.android.presentation.car.CarPhotosSlideShowActivity"/>
+        <activity android:label="@string/profile.title" android:name="com.drivy.android.activity.session.ProfileShowActivity" android:launchMode="singleTop" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/profile.edit.title" android:name="com.drivy.android.presentation.profile.ProfileEditActivity" android:exported="true" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.drivy.android.activity.BaseWebViewActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.presentation.car.CarDashboardActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation" android:parentActivityName="com.drivy.android.presentation.MainActivity"/>
+        <activity android:theme="@null" android:name="com.drivy.android.presentation.common.FragmentHolderActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.drivy.android.presentation.car.search.CarsSearchActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.car.show.PricingSectionActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.registration.RegistrationActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:label="@string/onboarding.owner.navigation.title" android:name="com.drivy.android.presentation.owner.onboarding.OwnerLandingActivity" android:screenOrientation="@integer/screen_orientation" android:parentActivityName="com.drivy.android.presentation.MainActivity"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt" android:label="@string/navigation.your_car_keys" android:name="com.drivy.android.presentation.owner.carkeys.OwnerCarKeysActivity" android:exported="true" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.newcarform.NewCarFormBifurcationActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.newcarform.NewCarFormActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.newcarform.UnderstandPricingActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.newcarform.pricing.smartpricing.UnderstandSmartPricingActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.newcarform.end.NewCarFormEndActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.car.CarPendingActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.newcarform.PricingLoaderActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.order.AddressPickerActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:name="com.drivy.android.activity.order.OrderActivity" android:screenOrientation="@integer/screen_orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Dark" android:name="com.drivy.android.presentation.camera.CameraActivity" android:screenOrientation="userPortrait"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:label="@string/exterior_inspection_check.car_pictures_review.title" android:name="com.drivy.android.presentation.camera.exteriorinspection.ExteriorInspectionPhotoViewerActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Dark" android:name="com.drivy.android.presentation.common.PhotoViewActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:label="@string/dashboard.car.photos.title" android:name="com.drivy.android.presentation.car.CarPhotoEditActivity" android:launchMode="singleTask" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.activity.OneTimeTokenActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.presentation.help.home.HelpHomeActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:name="com.drivy.android.presentation.help.HelpContactActivity" android:screenOrientation="@integer/screen_orientation"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.announcement.AnnouncementActivity" android:launchMode="singleTop"/>
+        <activity android:theme="@style/Theme.Cobalt.Dialog" android:name="com.drivy.android.presentation.common.AlertBottomSheetActivity" android:exported="true" android:launchMode="singleTop" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.rental.cancellation.CancellationActivity" android:launchMode="singleTask" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.car.checklist.ChecklistActivity" android:launchMode="singleTask"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.car.seasontiers.introduction.SeasonTiersIntroductionActivity" android:launchMode="singleTask"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.car.seasontiers.calculationinformation.SeasonTiersCalculationInformationActivity" android:launchMode="singleTask"/>
+        <activity android:theme="@style/Theme.Cobalt.Transparent.DialogActivity" android:name="com.drivy.android.presentation.survey.owner.OwnerSurveyActivity" android:launchMode="singleTask" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt" android:name="com.drivy.android.presentation.cobalt.browser.CobaltBrowserActivity"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.owner.car.monthcalendar.OwnerCarMonthCalendarActivity" android:launchMode="singleTask"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.owner.car.daycalendar.OwnerCarDayCalendarActivity" android:launchMode="singleTask"/>
+        <activity android:theme="@style/PreviewTheme.Cobalt.Modal" android:name="com.drivy.android.presentation.owner.car.unavailabilityedit.OwnerCarUnavailabilityEditActivity" android:launchMode="singleTask"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.c4mprod.voiturelib.sharedprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/shared_provider_paths"/>
+        </provider>
+        <receiver android:name="com.drivy.android.receiver.ShareBroadcastReceiver" android:exported="true"/>
+        <receiver android:name="com.drivy.android.presentation.car.show.CarShowFragment$ShareBroadcastReceiver" android:exported="true"/>
+        <receiver android:name="com.drivy.android.system.receiver.AppUpdateReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.braze.ui.BrazeWebViewActivity" android:exported="false"/>
+        <activity android:name="com.braze.ui.activities.BrazeFeedActivity" android:exported="false"/>
+        <activity android:name="com.braze.ui.activities.ContentCardsActivity" android:exported="false"/>
+        <activity android:theme="@style/Braze.PushTrampoline.Transparent" android:name="com.braze.push.NotificationTrampolineActivity" android:exported="false" android:taskAffinity=".NotificationTrampolineActivity" android:excludeFromRecents="true" android:launchMode="singleInstance" android:autoRemoveFromRecents="true"/>
+        <receiver android:name="com.braze.push.BrazePushReceiver" android:exported="false"/>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.paymentsheet.PaymentSheetActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.customersheet.CustomerSheetActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity" android:exported="false"/>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.paymentsheet.paymentdatacollection.bacs.BacsMandateConfirmationActivity" android:exported="false"/>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity" android:exported="false"/>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.paymentsheet.ui.SepaMandateActivity" android:exported="false"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <service android:name="com.onfido.android.sdk.capture.ui.CrashHandlerService" android:enabled="true"/>
+        <activity android:name="com.onfido.android.sdk.capture.core.CoreActivity" android:process=":onfido_process" android:screenOrientation="sensorPortrait"/>
+        <meta-data android:theme="@style/OnfidoActivityTheme" android:name="com.google.mlkit.vision.DEPENDENCIES" android:process=":onfido_process" android:value="face,ocr,barcode"/>
+        <activity android:label="ᜀ" android:name="com.onfido.android.sdk.capture.ui.OnfidoActivity" android:exported="false" android:process=":onfido_process" android:launchMode="singleTask" android:screenOrientation="sensorPortrait" android:hardwareAccelerated="true"/>
+        <activity android:name="com.onfido.android.sdk.capture.ui.OnfidoSplashActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="sensorPortrait"/>
+        <activity android:label="ᜁ" android:name="com.onfido.android.sdk.capture.ui.camera.CaptureActivity" android:exported="false" android:process=":onfido_process" android:screenOrientation="sensorPortrait" android:hardwareAccelerated="true"/>
+        <provider android:name="com.onfido.android.sdk.capture.utils.OnfidoProcessMlKitProvider" android:exported="false" android:process=":onfido_process" android:authorities="com.c4mprod.voiturelib.onfido.mlkitinitprovider" android:initOrder="99"/>
+        <service android:name="com.onfido.android.sdk.capture.token.TokenExpirationHandlerService" android:exported="false"/>
+        <service android:name="com.onfido.android.sdk.capture.ui.OnfidoStarterService" android:exported="false" android:process=":onfido_process"/>
+        <service android:name="com.onfido.android.sdk.capture.ui.MainProcessStarterService" android:exported="false"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.c4mprod.voiturelib.androidx-startup">
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/StripeTransparentTheme" android:name="com.stripe.android.link.LinkForegroundActivity" android:launchMode="singleTop" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@style/StripeTransparentTheme" android:name="com.stripe.android.link.LinkRedirectHandlerActivity" android:exported="true" android:launchMode="singleInstance" android:autoRemoveFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="link-popup" android:host="complete" android:path="/com.c4mprod.voiturelib"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/StripePaymentSheetDefaultTheme" android:name="com.stripe.android.ui.core.cardscan.CardScanActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeDefaultTheme" android:name="com.stripe.android.view.AddPaymentMethodActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeDefaultTheme" android:name="com.stripe.android.view.PaymentMethodsActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeDefaultTheme" android:name="com.stripe.android.view.PaymentFlowActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeDefaultTheme" android:name="com.stripe.android.view.PaymentAuthWebViewActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/StripeTransparentTheme" android:name="com.stripe.android.view.PaymentRelayActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeTransparentTheme" android:name="com.stripe.android.payments.StripeBrowserLauncherActivity" android:exported="false" android:launchMode="singleTask"/>
+        <activity android:theme="@style/StripeTransparentTheme" android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity" android:exported="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="stripesdk" android:host="payment_return_url" android:path="/com.c4mprod.voiturelib"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/StripeDefaultTheme" android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeGooglePayDefaultTheme" android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeGooglePayDefaultTheme" android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity" android:exported="false"/>
+        <activity android:theme="@style/StripePayLauncherDefaultTheme" android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity" android:exported="false"/>
+        <activity android:theme="@style/StripeTransparentTheme" android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity" android:exported="false"/>
+        <activity android:theme="@style/Stripe3DS2Theme" android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity" android:exported="false"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ml.modeldownloader.ktx.FirebaseMlModelDownloaderKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ml.modeldownloader.FirebaseModelDownloaderRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="genericidp" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="recaptcha" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.sessions.SessionLifecycleService" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.c4mprod.voiturelib.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <uses-library android:name="androidx.camera.extensions.impl" android:required="false"/>
+        <service android:name="androidx.camera.core.impl.MetadataHolderService" android:enabled="false" android:exported="false">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fbconnect" android:host="cct.com.c4mprod.voiturelib"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.c4mprod.voiturelib.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:name="com.google.mlkit.common.internal.MlKitInitProvider" android:exported="false" android:authorities="com.c4mprod.voiturelib.mlkitinitprovider" android:initOrder="99"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <provider android:name="com.squareup.picasso.PicassoProvider" android:exported="false" android:authorities="com.c4mprod.voiturelib.com.squareup.picasso"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <receiver android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="singleInstance"/>
+        <activity android:theme="@style/Theme.PlayCore.Transparent" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+        <service android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService" android:enabled="false" android:exported="true">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="11003"/>
+        </service>
+        <service android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService" android:enabled="false" android:exported="false"/>
+        <uses-native-library android:name="libOpenCL.so" android:required="false"/>
+        <uses-native-library android:name="libOpenCL-car.so" android:required="false"/>
+        <uses-native-library android:name="libOpenCL-pixel.so" android:required="false"/>
+        <meta-data android:name="aia-compat-api-min-version" android:value="1"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+    </application>
+</manifest>
