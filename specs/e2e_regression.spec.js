@@ -1,6 +1,6 @@
 const wdio = require(`webdriverio`);
 const OPTS = require(`../constants/configs`).OPTS;
-const DRIVER_INFO = require(`../constants/configs`).DRIVER_INFO;
+const USER_INFO = require(`../constants/configs`).USER_INFO;
 // const percySnapshot = require("@percy/webdriverio");
 
 const LoginPage = require(`../pom/login`);

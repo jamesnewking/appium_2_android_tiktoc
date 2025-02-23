@@ -1,9 +1,9 @@
 const dotenv = require(`dotenv`);
 dotenv.config();
 
-const DRIVER_INFO = {
-  EMAIL: process.env.DRIVER_EMAIL,
-  PASSWORD: process.env.DRIVER_PASSWORD,
+const USER_INFO = {
+  EMAIL: process.env.USER_EMAIL,
+  PASSWORD: process.env.USER_PASSWORD,
 };
 
 const ANDROID_CAPS = {
@@ -23,6 +23,6 @@ const OPTS = {
   capabilities: ANDROID_CAPS,
 };
 module.exports = {
-  DRIVER_INFO,
+  USER_INFO,
   OPTS,
 };
