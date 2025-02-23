@@ -13,9 +13,6 @@ module.exports = class Login {
     this.startWatchingButton = this.client.$(
       `id:com.zhiliaoapp.musically:id/pjy`
     );
-    this.swipeUpForMore = this.client.$(
-      `id:com.zhiliaoapp.musically:id/hyx`
-    );
   
   }
 
@@ -33,15 +30,6 @@ module.exports = class Login {
 
   async clickStartWatchingButton() {
     await this.startWatchingButton.click();
-  }
-
-  async swipeUp() {   
-    await this.swipeUpForMore.dragAndDrop({ x: 500, y: -5000 });
-    // await this.client.swipe({
-    //   "from.x": 500,
-    //   "to.y": 1000,
-    // })
-  }
-    
+  }    
 
 };
