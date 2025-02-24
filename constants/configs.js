@@ -10,7 +10,7 @@ const ANDROID_CAPS = {
   platformName: "Android",
   "appium:platformVersion": "15",
   "appium:deviceName": "Pixel 9 Pro API 35",
-  "appium:app": "/Users/jameswang/Documents/code/Android/apk/TikTok_38.8.2_APKPure.apk",
+  "appium:app": "/Users/jameswang/Documents/code/Android/apk/android_automation.apk",
   "appium:appPackage": "com.zhiliaoapp.musically",
   "appium:appActivity": "com.zhiliaoapp.musically/com.ss.android.ugc.aweme.splash.SplashActivity",
   "appium:automationName": "UiAutomator2"
