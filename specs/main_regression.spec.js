@@ -19,15 +19,10 @@ describe(`Android driver mobile app regression test`, () => {
    test(`Login to android mobile app`, async () => {
     const loginPage = new LoginPage(client);
     const homePage = new HomePage(client);
-    await client.pause(5000);
     await loginPage.clickGoogleSignBackInContinueAsUser();
-    await client.pause(5000);
     await loginPage.clickPermissionsAllowNotifications();
-    await client.pause(5000);
     await loginPage.clickChooseInterestsSkip();
-    await client.pause(5000);
     await loginPage.clickStartWatchingButton();
-    await client.pause(5000);
     await homePage.swipeUp();
     await client.pause(5000);
   });
