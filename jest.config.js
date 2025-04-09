@@ -5,7 +5,8 @@
 
 module.exports = {
   rootDir: "./specs",
-  verbose: true,
+  // verbose: true,
+  verbose: false,
   testTimeout: 8000000,
   collectCoverage: true,
   moduleFileExtensions: ["js", "mjs"],

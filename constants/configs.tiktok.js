@@ -10,9 +10,9 @@ const ANDROID_CAPS = {
   platformName: "Android",
   "appium:platformVersion": "15",
   "appium:deviceName": "Pixel 9 Pro API 35",
-  "appium:app": "/Users/jameswang/Documents/code/Android/apk/loop/loop_ev/com.renewage.loop.apk",
-  "appium:appPackage": "com.renewage.loop",
-  "appium:appActivity": "com.renewage.loop/com.renewage.loop.ui.screens.start.StartActivity",
+  "appium:app": "/Users/jameswang/Documents/code/Android/apk/android_automation.apk",
+  "appium:appPackage": "com.zhiliaoapp.musically",
+  "appium:appActivity": "com.zhiliaoapp.musically/com.ss.android.ugc.aweme.splash.SplashActivity",
   "appium:automationName": "UiAutomator2"
 };
 
