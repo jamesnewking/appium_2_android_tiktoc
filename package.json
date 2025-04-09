@@ -4,7 +4,8 @@
   "description": "Android automation on Appium 2.0",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=jest.config.js --detectOpenHandles ./specs/main_regression.spec.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=jest.config.js --detectOpenHandles ./specs/main_regression.spec.js",
+    "loop": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=jest.config.js --detectOpenHandles ./specs/loop.spec.js"
   },
   "keywords": [
     "android",

@@ -18,3 +18,5 @@
 - To run in terminal
 > npm run test
 
+- To run test on Loop
+> npm run loop
