@@ -39,11 +39,25 @@ module.exports = class Home {
     );
     this.searchManyResultsLOC =  
       `//androidx.recyclerview.widget.RecyclerView[@resource-id="com.renewage.loop:id/recyclerview"]/android.widget.RelativeLayout`;
-    //`//androidx.recyclerview.widget.RecyclerView[@resource-id="com.renewage.loop:id/recyclerview"]/android.widget.RelativeLayout[1]`
-
-    // this.bottomNavBarProfile = this.client.$(
+    
+    this.firstSearchResultLOC = 
+      `//androidx.recyclerview.widget.RecyclerView[@resource-id="com.renewage.loop:id/recyclerview"]/android.widget.RelativeLayout[1]`;
+    
+    this.loadingMessageLOC = 
+      `id:com.renewage.loop:id/textview_loading`;
+      // this.bottomNavBarProfile = this.client.$(
     //   `~Profile`
     // ); //accessibility ID
+    this.searchResultsTitleLOC = `id=com.renewage.loop:id/tvTitle`;
+    
+    this.searchResultDistanctLOC = `id=com.renewage.loop:id/tvDistance`;
+    
+    this.searchResultAddressLOC = `id=com.renewage.loop:id/tvFullAddress`;
+    
+    this.searchResultsOpenHoursLOC = `id=com.renewage.loop:id/tvWorkingHours`;
+    
+    this.searchResultsAvailableCountLOC = `id=com.renewage.loop:id/tvAvailableCount`;
+
   }
 
   async clickPermissionLocationAllowWhileUsingAppButton() {
@@ -150,9 +164,49 @@ module.exports = class Home {
     await this.mapBottomSearchBar.click();
   }
 
-  async getNumberOfSearchResults() {
-    await this.client.pause(10000);
+  async getArrayOfSearchResults() {
+    const searchResultsArray = [];
+    const loadingMessage = await this.client.$(this.loadingMessageLOC);
+    try {
+      await loadingMessage.waitForDisplayed({
+        timeout: 6000,
+        // interval: 5000,
+        reverse: true, // wait for the loading message to disappear
+        timeoutMsg: `expected loading message to disappear after 5s`,
+        // timeoutMsg: `expected first search result to be displayed after 10s`,
+      });
+    } catch (error) {
+      await loadingMessage.waitForDisplayed({
+        timeout: 2000,
+        // interval: 5000,
+        reverse: true, // wait for the loading message to disappear
+        timeoutMsg: `expected loading message to disappear after 2s`,
+        // timeoutMsg: `expected first search result to be displayed after 10s`,
+      });
+    }
     this.searchManyResults = await this.client.$$(this.searchManyResultsLOC);
-    return await this.searchManyResults.length;
+    const searchManyResultsCount = await this.searchManyResults.length;
+    // await this.client.pause(2000);
+    const searchResultTitleEleArr = await this.client.$$(this.searchResultsTitleLOC);
+    const searchResultDistanceEleArr = await this.client.$$(this.searchResultDistanctLOC);
+    const searchResultAddressEleArr = await this.client.$$(this.searchResultAddressLOC);
+    const searchResultOpenHoursEleArr = await this.client.$$(this.searchResultsOpenHoursLOC);
+    const searchResultAvailableCountEleArr = await this.client.$$(this.searchResultsAvailableCountLOC);
+    for(let i = 0; i < searchManyResultsCount; i++) {
+      const resultTitle = await searchResultTitleEleArr[i].getText();
+      const resultDistance = await searchResultDistanceEleArr[i].getText();
+      const resultAddress = await searchResultAddressEleArr[i].getText();
+      const resultOpenHours = await searchResultOpenHoursEleArr[i].getText();
+      const resultAvailableCount = await searchResultAvailableCountEleArr[i].getText();
+      const resultObj = {
+        title: resultTitle,
+        distance: resultDistance,
+        address: resultAddress,
+        openHours: resultOpenHours,
+        availableCount: resultAvailableCount
+      };
+      searchResultsArray.push(resultObj);
+    };
+    return searchResultsArray;
   }
 };
