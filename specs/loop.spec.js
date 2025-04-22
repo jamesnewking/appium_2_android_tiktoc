@@ -41,9 +41,12 @@ describe(`Android driver mobile app regression test`, () => {
   test(`Check Number of Search Results`, async () => {
     const homePage = new HomePage(client);
     await homePage.clickMapBottomSearchBar();
-    const numberOfSearchResults = await homePage.getNumberOfSearchResults();
+    
+    const searchResultsArray = await homePage.getArrayOfSearchResults();
+    const numberOfSearchResults = searchResultsArray.length;
     console.log(`Number of search results: ${numberOfSearchResults}`);
     expect(numberOfSearchResults).toBeGreaterThan(0);
+    console.table(searchResultsArray);
     // await homePage.clickNavBackButton();
     // await homePage.clickMapFilterButton();
     await client.pause(5000);
