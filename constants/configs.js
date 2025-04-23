@@ -22,7 +22,9 @@ const OPTS = {
   port: 4723,
   capabilities: ANDROID_CAPS,
 };
+
 module.exports = {
   USER_INFO,
   OPTS,
+  ANDROID_CAPS
 };
