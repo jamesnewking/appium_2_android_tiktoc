@@ -2,11 +2,12 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
+const { ANDROID_CAPS } = require(`./constants/configs`);
 
 module.exports = {
   rootDir: "./specs",
-  // verbose: true,
-  verbose: false,
+  verbose: true,
+  // verbose: false,
   testTimeout: 8000000,
   collectCoverage: true,
   moduleFileExtensions: ["js", "mjs"],
@@ -15,7 +16,15 @@ module.exports = {
   //   "^.+\\.mjs$": "babel-jest",
   // },
   testRegex: "((\\.|/*.)(spec))\\.js?$",
-
+  testEnvironment: "allure-jest/node",
+  testEnvironmentOptions: {
+    environmentInfo: {
+      os_platform: ANDROID_CAPS.platformName,
+      os_release: ANDROID_CAPS["appium:deviceName"],
+      os_version: ANDROID_CAPS["appium:platformVersion"],
+      node_version: process.version,
+    }
+  },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
   // Stop running tests after `n` failures
@@ -149,6 +158,7 @@ module.exports = {
   // unmockedModulePathPatterns: undefined,
   // Indicates whether each individual test should be reported during the run
   // verbose: undefined,
+  verbose: true,
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
   // watchPathIgnorePatterns: [],
   // Whether to use watchman for file crawling
